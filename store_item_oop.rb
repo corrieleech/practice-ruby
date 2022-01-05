@@ -1,33 +1,13 @@
 class Item
+  
+  attr_reader :name, :color, :price, :stock
+  attr_writer :price, :stock
+
   def initialize (name, color, price, stock)
     @name = name
     @color = color
     @price = price
     @stock = stock
-  end
-
-  def name
-    @name
-  end
-
-  def color
-    @color
-  end
-
-  def price
-    @price
-  end
-
-  def stock
-    @stock
-  end
-
-  def price=(input_price)
-    @price = input_price
-  end
-
-  def stock=(input_stock)
-    @stock = input_stock
   end
 
 end
@@ -41,3 +21,7 @@ puts "Oh, you're interested in a #{item2.name}?"
 puts "The price of the item is $#{item2.price}."
 puts "The color of the item is #{item2.color}."
 puts "We have #{item2.stock} in stock."
+
+item1.stock = 1
+
+puts item1.stock
